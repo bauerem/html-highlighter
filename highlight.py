@@ -1,6 +1,7 @@
 #from bs4 import BeautifulSoup
 import timeit
-from legal_sentence_tokenizer import sentence_tokenize
+#from legal_sentence_tokenizer import sentence_tokenize
+from nltk.tokenize import sent_tokenize
 
 def summarizer(candidate_sentences, candidate_sentences_index):
     winner_indices, winner_sentences = [], []
