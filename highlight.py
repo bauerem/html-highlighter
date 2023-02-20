@@ -22,7 +22,7 @@ def main():
         #soup = BeautifulSoup(soup, "html.parser")
 
         #text = soup.prettify()
-        text = sentence_tokenize(html)
+        text = sent_tokenize(html)
         non_html = []
         non_html_indices = []
         for i, sent in enumerate(text):
