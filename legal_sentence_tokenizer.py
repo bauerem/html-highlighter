@@ -36,19 +36,3 @@ def sentence_tokenize(text, batch_size = 6):
 			result.append(tokenizer.decode(sent))
 			sent = []
 	return result
-
-if __name__ == "__main__":
-	with open("case_3S4V-P9V0-003B-W06R-00000-00.txt") as f:
-		text = f.read()
-	starttime = timeit.default_timer()
-	sentences = sentence_tokenize(text)	
-	with open("sentences.txt", "w") as outfile:
-		for sent in sentences:
-			print (sent)
-			print ("*" * 100)
-			outfile.write(sent + "\n")
-	
-	# to run in other python programs
-	# from legal_sentence_tokenization import sentence_tokenize
-	
-	# if on GPU, set everything to gpu
